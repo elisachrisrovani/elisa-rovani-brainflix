@@ -4,47 +4,85 @@
 .container{
     display: flex;
     flex-direction: column;
-    input{
-        width: 60%;
-        margin: 1rem;
-        height: 2rem;
-        padding: 0.6rem 2.1rem;
-        border: .15rem solid $mercury;
-        border-radius: 0.3rem;
-        background-color: $alabaster;
-        color: $brainflix-darkBlack;
-        font-family: Avenir-regular;
-        font-size: 1rem;
-        
+    
+
+    @include tablet{
+        flex-direction: row;
     }
+
+
+    &__block{
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+    // input{
+    //     width: 60%;
+    //     margin: 1rem;
+    //     height: 2rem;
+    //     padding: 0.6rem 2.1rem;
+    //     border: .15rem solid $mercury;
+    //     border-radius: 0.3rem;
+    //     background-color: $alabaster;
+    //     color: $brainflix-darkBlack;
+    //     font-family: Avenir-regular;
+    //     font-size: 1rem;
+
+    //     @include tablet{
+    //         width: 50%;
+    //         padding: 0.5rem 2.5rem;
+    //         margin: 1.5rem 0 0 3rem;
+            
+    //     }
+        
+   // }
     &__button{
         width: 90%;
         margin: 1rem;
         height: 4rem;
         padding: 1rem 5rem;
         position: relative;
-        top: -4.5rem;
+       top: -1.5rem;
         font-family: Avenir-regular;
         color: $white;
         font-size: 1rem;
         background-color: $brainflix-blue;
         border: 0.3rem solid $brainflix-blue;
         border-radius: 0.3rem;
+
+        @include tablet{
+            width: 40%;
+           padding: 1rem 5rem;
+            top: .6rem;
+            left: -4.5rem;
+            height: 3.2rem;
+            font-size: 0.9rem;
+        }
     }
 
     &__search-icon{
         width: 1.3rem;
         position: relative;
-        top: -6.2rem;
+        top: -3.3rem;
         left: 1.6rem;
+
+        @include tablet{
+            left: -19rem;
+            top:-0.8rem;
+        }
     }
 
     &__upload-icon{
         width: 1.8rem;
         position: relative;
-        top: -8.3rem;
+        top: -5.4rem;
         left: 1.8rem;
 
+        @include tablet{
+            top: -.5rem;
+            left: -18rem;
+
+        }
         
     }
 }

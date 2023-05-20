@@ -2,9 +2,11 @@ import logo from '../../assets/images/BrainFlix-logo.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import {Logo} from './LogoApp';
 import {Image} from './headerImage';
-import Search from '../../assets/images/search.svg';
-import Upload from '../../assets/images/upload.svg';
+import { Search } from './Search';
+
 import './HeaderApp.scss';
+import { Button } from './Button';
+
 
 
 
@@ -13,11 +15,12 @@ export function Header(){
         <header>
             <div className='container' >
             <Logo src={logo} alt="logo"/>
-            <input type='text' placeholder='Search'></input>
+            <div className='container__block'>
+            <Search />
+        
             <Image src={avatar} alt="avatar"/>
-            <img className='container__search-icon' src={Search} alt="search"/>
-            <button className='container__button'>UPLOAD</button>
-            <img className='container__upload-icon' src={Upload} alt="upload"/>
+            </div>
+            <Button />
     
 
             </div>

@@ -1,5 +1,16 @@
+@import '../../styles/partials/mixins.scss';
+
 .logo{
-    margin: 1rem 0 .5rem 9rem;
+    
+    margin: 1rem 0 .5rem 7rem;
+    width: 28%;
    
-    width: 10rem;
+    @include tablet{
+        width: 40%;
+        position: relative;
+        height: 2rem;
+        left: 1rem;
+        top: .1rem;
+        margin: 2rem 5rem 1rem 0rem;
+    }
 }
