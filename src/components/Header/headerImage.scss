@@ -1,0 +1,14 @@
+@import '/src/styles/partials/mixins.scss';
+
+.avatar{
+    border-radius: 90%;
+    height: 45px;
+    width: 50px;
+    position: relative;
+    top: -4.2rem;
+    left: 25rem;
+    
+}
+.search-icon{
+    width: 10px;
+}
