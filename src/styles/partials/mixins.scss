@@ -12,3 +12,16 @@
     
   }
   
+  @mixin tabletInt{
+    @media (min-width: 920px){
+      @content();
+    }
+    
+  }
+  @mixin desktopHigh{
+    @media (min-width: 1500px){
+      @content();
+    }
+    
+  }
+  

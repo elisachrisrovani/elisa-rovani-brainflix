@@ -25,14 +25,31 @@
         font-size: 0.9rem;
     }
 
+    @include desktop{
+        width: 20%;
+        padding: 1rem 1rem;
+        top: 1em;
+        left: -17rem;
+    }
+    @include desktopHigh{
+        left: -20rem;
+    
+    }
+   
+
     img{
         position: absolute;
         top: .5rem;
         width: 8%;
 
         @include tablet{
-            width: 12%;
+            width: 2rem;
             top: 0.8rem;
+        }
+        @include desktop{
+            top: 0.6rem;
+            width: 14%;
+            left: 1rem;
         }
     }
     h2{
@@ -44,5 +61,13 @@
         @include tablet{
             left: 5rem;
         }
+        @include desktop{
+            font-size: 0.9rem;
+            left:4rem;
+        }
+        @include desktopHigh{
+            left: 6rem;
+        }
+
     }
 }
