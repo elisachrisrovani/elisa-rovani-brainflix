@@ -8,21 +8,16 @@ import './HeaderApp.scss';
 import { Button } from './Button';
 
 
-
-
 export function Header(){
     return(
         <header>
             <div className='container' >
             <Logo src={logo} alt="logo"/>
             <div className='container__block'>
-            <Search />
-        
+            <Search />        
             <Image src={avatar} alt="avatar"/>
             </div>
             <Button />
-    
-
             </div>
         </header>
     )
