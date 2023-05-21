@@ -2,8 +2,7 @@ import './ListApp.scss';
 
 export function ListApp(props){
     return(
-     
-             <ul className="video-list">
+            <ul className="video-list">
             {props.videos
             .filter((video)=> video.id !== props.activeVideo.id)
             .map((video) =>(

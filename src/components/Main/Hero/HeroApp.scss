@@ -1,5 +1,161 @@
+@import './../../../styles/partials/mixins.scss';
+@import './../../../styles/partials/variables.scss';
+
+//Main video section
+
 .main-video{
     video{
         width: 100%;
+       position: relative;
+       top: -3rem;
+       
+       
+    }
+    hr{
+        border: none;
+        background-color: $mercury;
+        height: 0.13rem;
+        margin:0;
+    }
+
+    &__title{
+        
+        font-family: Avenir-bold;
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+        margin-left: 1.2rem;
+        position: relative;
+        top: -1.5rem;
+        color: $brainflix-black;
+       
+    }
+
+  &__container{
+
+        display: flex;
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+
+        &__channel-name{
+            font-family: Avenir-bold;
+            font-size: 1.2rem;
+            margin: 1rem;
+            color: $brainflix-black;
+        }
+    
+        &__date{
+            font-size: 1rem;
+            font-family: Avenir-regular;
+            color: $silver;
+            margin: 1rem;
+    
+        }
+    }
+    &__inline{
+        display: flex;
+        flex-direction: column;
+       
+
+        &__views-img{
+            width: 1.5rem;
+            position: relative;
+            top: 1rem;
+            left: 11.8rem;
+        }
+
+              
+        &__likes-img{
+            width: 1.2rem;
+            position: relative;
+            top: 3.2rem;
+            left: 12rem;
+        }
+
+        &__text{
+            font-size: 1rem;
+            font-family: Avenir-regular;
+            color: $silver;
+            margin: 1rem 0 1rem 12rem;
+        }
+    }
+
+    &__description{
+        font-family: Avenir-regular;
+        color: $brainflix-black;
+        font-size: 1rem;
+        line-height: 1.7rem;
+        width: 90%;
+        margin: 1rem;
+    }
+
+  }
+   
+}
+
+// Comments Input Section
+
+.comments-container{
+
+
+    h2{
+        font-family: Avenir-bold;
+        color: $brainflix-black;
+        font-size: 1.1rem;
+        margin: 1.5rem;
+    }
+
+    &__block{
+
+
+        h3{
+            font-family: Avenir-regular;
+            color: $silver;
+            margin: 1rem 5.5rem;
+            font-size: 1rem;
+        }
+
+        &__avatar-picture{
+            border-radius: 90%;
+            height: 45px;
+            width: 50px;
+            position: relative;
+            top: -0.8rem;
+            left: 1.8rem;
+        }
+
+        input{
+            height: 2rem;
+            position: relative;
+            top: -1.8rem;
+            left: 2.5rem;
+            padding-bottom: 5rem;
+            padding-left: 1rem;
+            
+        }
+
+        &__button{
+            background-color: $brainflix-blue;
+            position: relative;
+            border-radius: 0.2rem;
+            top:-1.4rem;
+            left: 5.5rem;
+            padding: 0.2rem 1rem;
+            width: 60%;
+
+            h4{
+                color: $white;
+                position: relative;
+                left: 6rem;
+                top: -0.8rem;
+                font-family: Avenir-regular;
+            }
+            img{
+                position: relative;
+                top: 1rem;
+                left: 0.1rem;
+            }
+        }
     }
 }
