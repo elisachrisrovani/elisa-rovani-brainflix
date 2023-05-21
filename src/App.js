@@ -27,12 +27,6 @@ function App() {
      
         <HeroApp activeVideo={activeVideo}/>
         
-        {/* <CommentsInput 
-               /> */}
-        {/* <CommentsApp
-         messages={messages}
-        /> */}
-
         <ListApp
         handleChangeActiveVideo={handleChangeActiveVideo}
         videos={videos}

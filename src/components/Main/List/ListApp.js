@@ -2,7 +2,10 @@ import './ListApp.scss';
 
 export function ListApp(props){
     return(
+            
+            
             <ul className="video-list">
+            <h3 className='video-list__title'>NEXT VIDEOS</h3>
             {props.videos
             .filter((video)=> video.id !== props.activeVideo.id)
             .map((video) =>(
@@ -11,9 +14,9 @@ export function ListApp(props){
                 className='video-list__item'
                 onClick={() => props.handleChangeActiveVideo(video.id)}
                 >
-                <img src = {video.image} alt='video'/>
-                <h3>{video.title}</h3>
-                <p>{video.channel}</p>
+                <img className='video-list__img' src = {video.image} alt='video'/>
+                <h3 className='video-list__name'>{video.title}</h3>
+                <p className='video-list__channel'>{video.channel}</p>
             </li>
             ))
             }

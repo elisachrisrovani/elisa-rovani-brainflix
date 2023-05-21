@@ -63,17 +63,23 @@ return(
             </div>
         </div>
         <hr/>
-        <div className='comments-container__avatar'></div>
+       
 
         {/* Comments section */}
         
        <ul>
-        {props.activeVideo.comments.map((comment,index)=>(
+      
+        {props.activeVideo.comments.map((message,index)=>(
             <>
-            <li key={index} className='comment__title'>{comment.name}</li>
-            <li key={index} className='comment__message'>{comment.comment}</li>
-            <li key={index} className='comment__date'>{comment.timestamp}</li>
-            </>         
+            <li key={index} className='comments-container__title'>{message.name}</li>
+            <div className='comments-container__avatar'></div>
+            { <li key={index} className='comments-container__message'>{message.comment}</li> }
+            {/* <div className='comments-container__avatar'></div> */}
+            { <li key={index} className='comments-container__date'>{message.timestamp}</li>}
+            {/* <div className='comments-container__avatar'></div> */}
+            <hr/>
+            </>   
+
         ))}
        
        </ul>

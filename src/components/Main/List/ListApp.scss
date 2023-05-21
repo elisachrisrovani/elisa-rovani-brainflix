@@ -1,0 +1,42 @@
+@import './../../../styles/partials/mixins.scss';
+@import './../../../styles/partials/variables.scss';
+
+
+.video-list{
+
+     li{
+         height: 110px;
+     }
+    &__title{
+        font-family: Avenir-regular;
+        font-size: 1rem;
+        color: $silver;
+        margin: 1rem;
+    }
+
+    &__img{
+        height: 6rem;
+        width: 9rem;
+        border-radius: 0.5rem;
+    }
+
+    &__name{
+        font-family: Avenir-bold;
+        color: $brainflix-black;
+        width: 50%;
+        font-size: 1.1rem;
+        line-height: 1.54rem;
+        position: relative;
+        top: -5.5rem;
+        left: 12rem;
+    }
+    &__channel{
+        font-family: Avenir-regular;
+        color: $brainflix-black;
+        width: 50%;
+        font-size: 1.1rem;
+        position: relative;
+        top: -4.2rem;
+        left: 12rem;
+    }
+}

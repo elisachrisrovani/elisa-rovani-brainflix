@@ -158,4 +158,51 @@
             }
         }
     }
+
+    //Published comments section
+
+    li{
+        height: 1.5rem;
+    }
+
+    &__title{
+        font-family: Avenir-bold;
+        font-size: 1.1rem;
+        color: $brainflix-black;
+        margin: 1rem 5.5rem;
+        list-style-type: none;
+        
+    }
+    &__message{
+        font-family: Avenir-regular;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $brainflix-black;
+        margin: 1rem 5.5rem;
+        list-style-type: none;
+        position: relative;
+        top: -4rem;
+    }
+
+    &__date{
+        font-family: Avenir-regular;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        color: $silver;
+        margin: 1rem 5.5rem;
+        list-style-type: none;
+        position: relative;
+        top: -8.8rem;
+        left: 13rem;
+    }
+
+    &__avatar{
+            border-radius: 90%;
+            height: 45px;
+            width: 50px;
+            background-color: $mercury;
+            position: relative;
+            top: -15rem;
+            left: 1.5rem;
+    }
 }
