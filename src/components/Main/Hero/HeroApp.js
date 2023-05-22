@@ -4,6 +4,9 @@ import likes from './../../../assets/images/likes.svg';
 import avatar from './../../../assets/images/Mohan-muruge.jpg';
 import publish from './../../../assets/images/add_comment.svg';
 
+
+
+
 export function HeroApp(props){
 
     const postedDate = new Date (props.activeVideo.timestamp).toLocaleDateString('en-US').split(',')[0];
@@ -18,6 +21,9 @@ return(
     <div>       
      <video controls  poster={props.activeVideo.image}
      />
+     
+
+
        <h1 className='main-video__title'>{props.activeVideo.title}</h1>
        <hr/>
         <div>
@@ -47,8 +53,7 @@ return(
        <p>{props.activeVideo.description}</p>
        </div>
 
-       
-
+            
         {/* Comments input section */}
 
        <div className='comments-container'>

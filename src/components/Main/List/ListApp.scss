@@ -11,7 +11,7 @@
         font-family: Avenir-regular;
         font-size: 1rem;
         color: $silver;
-        margin: 1rem;
+        margin: 1rem 1.8rem;
     }
 
     &__img{
@@ -29,6 +29,10 @@
         position: relative;
         top: -5.5rem;
         left: 12rem;
+
+        @include tablet{
+            width: 25%;
+        }
     }
     &__channel{
         font-family: Avenir-regular;

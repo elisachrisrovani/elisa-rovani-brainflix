@@ -9,13 +9,27 @@
        position: relative;
        top: -3rem;
        
-       
+    }
+
+    &__scrup{
+        position: relative;
+        top: -5rem;
+    }
+    &__play{
+        position: relative;
+        top: -5rem;
+    }
+    &__closeScreen{
+        position: relative;
+        top: -5rem;
     }
     hr{
         border: none;
+        width: 90%;
         background-color: $mercury;
         height: 0.13rem;
         margin:0;
+        margin-left: 1rem;
     }
 
     &__title{
@@ -38,11 +52,19 @@
         display: flex;
         flex-direction: column;
 
+        @include tablet{
+            flex-direction: row;
+        }
+
         &__channel-name{
             font-family: Avenir-bold;
             font-size: 1.2rem;
             margin: 1rem;
             color: $brainflix-black;
+
+            @include tablet{
+                margin-left: 2rem;
+            }
         }
     
         &__date{
@@ -50,19 +72,32 @@
             font-family: Avenir-regular;
             color: $silver;
             margin: 1rem;
+
+            @include tablet{
+                margin-left: 2rem;
+            }
     
         }
     }
     &__inline{
         display: flex;
         flex-direction: column;
+        
+        @include tablet{
+            flex-direction: row;
+        }
        
 
         &__views-img{
             width: 1.5rem;
             position: relative;
             top: 1rem;
-            left: 11.8rem;
+            left: 9.5rem;
+
+            @include tablet{
+                top: -0.2rem;
+                left: 11rem;
+            }
         }
 
               
@@ -70,14 +105,24 @@
             width: 1.2rem;
             position: relative;
             top: 3.2rem;
-            left: 12rem;
+            left: 9.5rem;
+
+            @include tablet{
+                top:-0.2rem;
+                left: 22.8rem;
+            }
         }
 
         &__text{
             font-size: 1rem;
             font-family: Avenir-regular;
             color: $silver;
-            margin: 1rem 0 1rem 12rem;
+            margin: 1rem 0 1rem 10rem;
+
+            @include tablet{
+                position: relative;
+                
+            }
         }
     }
 
@@ -88,6 +133,10 @@
         line-height: 1.7rem;
         width: 90%;
         margin: 1rem;
+
+        @include tablet{
+            margin-left: 2rem;
+        }
     }
 
   }
@@ -150,6 +199,7 @@
                 left: 6rem;
                 top: -0.8rem;
                 font-family: Avenir-regular;
+                width: 50%;
             }
             img{
                 position: relative;
@@ -163,6 +213,12 @@
 
     li{
         height: 1.5rem;
+
+        @include tablet{
+            height: 0.2rem;
+        }
+
+       
     }
 
     &__title{
@@ -182,6 +238,11 @@
         list-style-type: none;
         position: relative;
         top: -4rem;
+
+        
+        @include tablet{
+            top: -2.5rem;
+        }
     }
 
     &__date{
@@ -193,7 +254,13 @@
         list-style-type: none;
         position: relative;
         top: -8.8rem;
-        left: 13rem;
+        left: 13.5rem;
+        width: 20%;
+
+        @include tablet{
+            margin-left: 30rem;
+            top: -6rem;
+        }
     }
 
     &__avatar{
@@ -202,7 +269,11 @@
             width: 50px;
             background-color: $mercury;
             position: relative;
-            top: -15rem;
+            top: -2.5rem;
             left: 1.5rem;
+
+            @include tablet{
+                top: -1.2rem;
+            }
     }
 }
