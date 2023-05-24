@@ -32,7 +32,10 @@
         left: -17rem;
     }
     @include desktopHigh{
-        left: -20rem;
+        left: -23rem;
+        width: 15%;
+        height: 0.4rem;
+        top: 0.5rem;
     
     }
    
@@ -66,7 +69,9 @@
             left:4rem;
         }
         @include desktopHigh{
-            left: 6rem;
+            left: 4rem;
+            top: 0.9rem;
+
         }
 
     }

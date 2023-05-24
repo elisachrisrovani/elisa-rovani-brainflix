@@ -24,12 +24,15 @@
     @include desktop{
         left: 33.5rem;
         top: -5.1rem;
-        width: 9%;
+        width: 8%;
         height: 30%;
 
     }
 
     @include desktopHigh{
-        left: 37rem;
+        width: 5.7%;
+        left: 36rem;
+        top: -4.1rem;
+        
     }
 }

@@ -18,11 +18,7 @@ return(
 
 
     <div className='main-video'>
-    <div>       
-     <video controls  poster={props.activeVideo.image}
-     />
      
-
 
        <h1 className='main-video__title'>{props.activeVideo.title}</h1>
        <hr/>
@@ -90,7 +86,7 @@ return(
        </ul>
        </div>
     </div>
-    </div>
+    
     </div>
 )
 }

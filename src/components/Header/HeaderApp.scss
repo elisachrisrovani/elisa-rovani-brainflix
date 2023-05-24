@@ -34,11 +34,15 @@
 
         @include tablet{
             width: 40%;
-           padding: 1rem 5rem;
+            padding: 1rem 5rem;
             top: .6rem;
             left: -4.5rem;
             height: 3.2rem;
             font-size: 0.9rem;
+        }
+
+        @include desktop{
+         
         }
     }
 
@@ -52,6 +56,8 @@
             left: -19rem;
             top:-0.8rem;
         }
+
+      
     }
 
     &__upload-icon{

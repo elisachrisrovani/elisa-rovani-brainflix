@@ -4,8 +4,8 @@ import { Header } from './components/Header/HeaderApp';
 import videosData from './data/video-details.json';
 import { HeroApp } from './components/Main/Hero/HeroApp';
 import { ListApp } from './components/Main/List/ListApp';
-import { CommentsInput } from './components/Main/Comments/CommentsInput';
-import { CommentsApp } from './components/Main/Comments/CommentApp';
+
+import { HeroVideo } from './components/Main/Hero/HeroVideo';
 
 function App() {
 
@@ -24,7 +24,11 @@ function App() {
       <Header />
 
      <main>
-     
+
+      <HeroVideo
+       activeVideo={activeVideo}
+      />
+      <div className='flex-wrapper'>
         <HeroApp activeVideo={activeVideo}/>
         
         <ListApp
@@ -32,7 +36,7 @@ function App() {
         videos={videos}
         activeVideo={activeVideo}
         />
-        
+        </div>
       
 
      </main>
