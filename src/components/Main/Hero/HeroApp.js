@@ -10,8 +10,8 @@ import publish from './../../../assets/images/add_comment.svg';
 export function HeroApp(props){
 
     const postedDate = new Date (props.activeVideo.timestamp).toLocaleDateString('en-US').split(',')[0];
-  //  const date = new Date (props.activeVideo.comments.timestamp).toLocaleTimeString('en-US');
-    
+    // const date = new Date (props.activeVideo.comments.timestamp).toLocaleDateString('en-US').split(',')[0];
+    const comments = (props.activeVideo);
 return(
 
     //Video being played section
@@ -71,13 +71,12 @@ return(
        <ul>
       
         {props.activeVideo.comments.map((message,index)=>(
+            
             <>
             <li key={index} className='comments-container__title'>{message.name}</li>
             <div className='comments-container__avatar'></div>
             { <li key={index} className='comments-container__message'>{message.comment}</li> }
-            {/* <div className='comments-container__avatar'></div> */}
-            { <li key={index} className='comments-container__date'>{message.timestamp}</li>}
-            {/* <div className='comments-container__avatar'></div> */}
+            { <li key={index} className='comments-container__date'>{new Date ().toLocaleTimeString(comments.comments[0].timestamp)}</li>}
             <hr/>
             </>   
 
