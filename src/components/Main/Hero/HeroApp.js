@@ -76,7 +76,7 @@ return(
             <li key={index} className='comments-container__title'>{message.name}</li>
             <div className='comments-container__avatar'></div>
             { <li key={index} className='comments-container__message'>{message.comment}</li> }
-            { <li key={index} className='comments-container__date'>{new Date ().toLocaleTimeString(comments.comments[0].timestamp)}</li>}
+            { <li key={index} className='comments-container__date'>{new Date (message.timestamp).toLocaleDateString()}</li>}
             <hr/>
             </>   
 
