@@ -28,12 +28,15 @@ export function Page(){
         <div className='main-container'>
         <hr/>
         <h1>Upload Video</h1>
+        <hr className='main-container__hr--hidden'/>
         <h2>VIDEO THUMBNAIL</h2>
         <img src={uploadVideo} alt={uploadVideo}/>
-        <h2>TITLE YOUR VIDEO</h2>
+        <h4>TITLE YOUR VIDEO</h4>
         <input className='main-container__input--title' type='text' placeholder='Add a title to your video'/>
-        <h2>ADD A VIDEO DESCRIPTION</h2>
+        <h4>ADD A VIDEO DESCRIPTION</h4>
         <input className='main-container__input--description' type='text' placeholder='Add a description to your video'/>
+
+        <hr className='main-container__line--hidden'/>
 
         <div className='main-container__button'>
         <img src={Publish} alt='upload'/>
