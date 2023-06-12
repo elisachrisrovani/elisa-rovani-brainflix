@@ -13,6 +13,8 @@
         height: 0.13rem;
         margin:0;
         margin-left: 1rem;
+        position: relative;
+        top: -0.3rem;
 
         @include desktop{
             margin-left: 5.7rem;
@@ -339,7 +341,7 @@
         list-style-type: none;
         position: relative;
         top: -8.8rem;
-        left: 17.5rem;
+        left: 16.5rem;
         width: 20%;
 
         @include tablet{
