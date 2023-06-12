@@ -6,6 +6,7 @@ import { Search } from './../../components/Header/Search';
 import {Button} from './../../components/Header/Button';
 import uploadVideo from './../../assets/images/Upload-video-preview.jpg';
 import Publish from './../../assets/images/publish.svg';
+import './page.scss';
 
 export function Page(){
 
@@ -23,7 +24,9 @@ export function Page(){
         </header>
 
         <main>
+           
         <div className='main-container'>
+        <hr/>
         <h1>Upload Video</h1>
         <h2>VIDEO THUMBNAIL</h2>
         <img src={uploadVideo} alt={uploadVideo}/>
@@ -34,7 +37,7 @@ export function Page(){
 
         <div className='main-container__button'>
         <img src={Publish} alt='upload'/>
-            <h3>UPLOAD</h3>
+            <h3>PUBLISH</h3>
         </div>
         
         <p>CANCEL</p>

@@ -1,0 +1,84 @@
+@import './../../styles/partials/mixins.scss';
+@import './../../styles/partials/variables.scss';
+
+.main-container{
+
+    h1{
+        font-family: Avenir-regular;
+        position: relative;
+        font-size: 1.8rem;
+        top: -1.5rem;
+        margin-left: 1rem;
+        color: $brainflix-black;
+    }
+    h2{
+        font-family: Avenir-regular;
+        color: $silver;
+        font-size: 0.9rem;
+        margin: 0.5rem 1rem 0rem 1rem;
+    }
+
+    img{
+        width: 92%;
+        position: relative;
+        left: 1rem;
+        top: -0.2rem;
+        border-radius: 5px;
+       margin: 0.8rem 0rem;
+    }
+    &__input--title{
+        width: 50%;
+        margin-left: 1rem;
+        padding: 0.5rem 10rem 0.5rem 1rem;
+        margin: 0.5rem 1rem;
+    }
+    &__input--description{
+        width: 60%;
+        margin-left: 1rem;
+        padding: 0.5rem 7.5rem 5rem 1rem;
+        margin: 0.5rem 1rem;
+    }
+
+    &__button{
+       // width: 90%;
+        background-color: $brainflix-blue;
+        border: hidden;
+        padding: 0rem 11rem 1rem 11rem ;
+        height: 2rem;
+        margin: 1rem;
+        border-radius: 5px;
+        
+        h3{
+            color: $white;
+            font-family: Avenir-regular;
+            position: relative;
+            top: -2rem;
+            font-size: 0.9rem;
+        }
+
+        img{
+            width: 1.5rem;
+            position: relative;
+            top: 0.2rem;
+            left: -10rem;
+        }
+    }
+
+    P{
+        font-family: Avenir-bold;
+        color: $brainflix-blue;
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 3rem;
+    }
+}
+
+hr{
+    border: none;
+    width: 100%;
+    background-color: $mercury;
+    height: 0.13rem;
+    margin:0;
+    position: relative;
+    top: -3rem;
+}
