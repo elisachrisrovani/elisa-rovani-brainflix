@@ -1,0 +1,25 @@
+@import './../../styles/partials/mixins.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-shadow: border;
+  //background-color: blue;
+  //border: 1px dashed red;
+}
+main{
+  @include desktop{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.flex-wrapper{
+  @include desktop{
+    display: flex;
+   max-width: 900PX;
+    //margin: 0 auto;
+    //padding: 0.5rem;
+  }
+}
+

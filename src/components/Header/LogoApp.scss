@@ -3,18 +3,23 @@
 .logo{
     
     margin: 1rem 0 .5rem 7rem;
-    width: 28%;
+    width: 12rem;
    
     @include tablet{
-        width: 40%;
+        width: 10rem;
         position: relative;
         height: 2rem;
         left: 1rem;
         top: .1rem;
-        margin: 2rem 5rem 1rem 0rem;
+        margin: 2rem 8rem 1rem 0rem;
+    }
+
+    @include tabletInt{
+        margin: 2rem 18rem 1rem 0rem;
     }
     @include desktop{
-        margin-right: 30rem;
+       margin-left: 10rem;
+       
     }
 
     @include desktopHigh{

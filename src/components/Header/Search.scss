@@ -6,6 +6,10 @@ img{
    position: relative;
    left: 1.9rem;
    top: .4rem;
+
+   @include desktop{
+    left: 6.8rem;
+   }
 }
 
 input{
@@ -21,15 +25,15 @@ input{
     font-size: 1rem;
 
     @include tablet{
-        width: 50%;
-        padding: 0.5rem 4rem 0.5rem 2.5rem;
+        //width: 50%;
+        padding: 0.5rem 1.5rem 0.5rem 2.2rem;
         margin: 1.5rem 0 ; 
     }
 
     @include desktop{
         width: 30%;
-        padding: 0.3rem 3rem 0.3rem 2.3rem;
-       
+        padding: 0.5rem 3rem 0.3rem 3rem;
+        margin-left: 5rem;
         
     }
 

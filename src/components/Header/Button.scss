@@ -2,10 +2,10 @@
 @import './../../styles/partials/variables.scss';
 
 .button-container{
-    width: 75%;
+   button{
+    width: 90%;
     margin: 1rem;
-    height: 1rem;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     position: relative;
     top: -3.5rem;
     font-family: Avenir-regular;
@@ -15,29 +15,32 @@
     border-radius: 0.3rem;
     text-align: center;
     align-items: center;
+    font-size: 1rem;
 
     @include tablet{
        width: 40%;
-       padding: 1rem 2.5rem;
+       padding: 1.2rem 6.5rem 1.4rem 4.5rem;
         top: 0.5rem;
-        left: -5rem;
+        left: 0.2rem;
         height: .7rem;
         font-size: 0.9rem;
+       
     }
 
     @include desktop{
+        padding: 1rem 7.5rem 1.4rem 5.5rem;
         width: 20%;
-        padding: 1rem 1rem;
-        top: 1em;
-        left: -17rem;
+        top: 0.6em;
+        left: -3rem;
     }
     @include desktopHigh{
-        left: -23rem;
+        left: -3rem;
         width: 15%;
         height: 0.4rem;
         top: 0.5rem;
     
     }
+   }
    
 
     img{
@@ -47,7 +50,8 @@
 
         @include tablet{
             width: 2rem;
-            top: 0.8rem;
+            top: 0.6rem;
+            left: 1rem;
         }
         @include desktop{
             top: 0.6rem;
@@ -55,24 +59,8 @@
             left: 1rem;
         }
     }
-    h2{
-        position: absolute;
-        top: 1rem;
-        left: 12rem;
-        font-size: 1rem;
+   
 
-        @include tablet{
-            left: 5rem;
-        }
-        @include desktop{
-            font-size: 0.9rem;
-            left:4rem;
-        }
-        @include desktopHigh{
-            left: 4rem;
-            top: 0.9rem;
-
-        }
-
-    }
+    
 }
+

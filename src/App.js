@@ -4,44 +4,26 @@ import { Header } from './components/Header/HeaderApp';
 import videosData from './data/video-details.json';
 import { HeroApp } from './components/Main/Hero/HeroApp';
 import { ListApp } from './components/Main/List/ListApp';
-
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { HeroVideo } from './components/Main/Hero/HeroVideo';
+import {Page} from './pages/page/page';
+import { Button } from './components/Header/Button';
+import { HomePage, homePage } from './pages/page/home';
 
 function App() {
 
-  const [videos] = useState(videosData);
-  const [activeVideo, setActiveVideo] = useState(videosData[0]);
-  const [messages] = useState(videosData);
-
-  const handleChangeActiveVideo = (id) =>{
-    const foundVideo = videos.find((video) => video.id === id);
-    setActiveVideo(foundVideo);
-  };
+    
 
   return (
-    <div className="App-container">
+    
+     
+           <BrowserRouter>
+            <Routes>
+            <Route path="/upload" element = {<Page/>}/>
+            <Route path="/" element = {<HomePage/>}/>
+            </Routes>
+            </BrowserRouter>  
 
-      <Header />
-
-     <main>
-
-      <HeroVideo
-       activeVideo={activeVideo}
-      />
-      <div className='flex-wrapper'>
-        <HeroApp activeVideo={activeVideo}/>
-        
-        <ListApp
-        handleChangeActiveVideo={handleChangeActiveVideo}
-        videos={videos}
-        activeVideo={activeVideo}
-        />
-        </div>
-      
-
-     </main>
-    </div>
-  );
-}
+  )}
 
 export default App;

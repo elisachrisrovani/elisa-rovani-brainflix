@@ -11,28 +11,26 @@
 
    @include tablet{
     
-    left: 35.5rem;
-    height: 35%;
-    width: 13%;
+    left: 28.5rem;
+    height: 45px;
+    width: 55px;
     top: -4.5rem;
    
    }
 
-   @include tabletInt{
-    left: 42rem;
-   }
+   
     @include desktop{
-        left: 33.5rem;
-        top: -5.1rem;
-        width: 8%;
-        height: 30%;
-
+        
+       left: 37rem;
+       top: -4.5rem;
+        width: 13.5%;
+       
     }
 
     @include desktopHigh{
-        width: 5.7%;
+       //width: 5.7%;
         left: 36rem;
-        top: -4.1rem;
+        top: -4.3rem;
         
     }
 }
