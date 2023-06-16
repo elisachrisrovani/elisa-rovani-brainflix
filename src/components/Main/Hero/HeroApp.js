@@ -1,33 +1,80 @@
 import './HeroApp.scss';
+
 import views from './../../../assets/images/views.svg';
 import likes from './../../../assets/images/likes.svg';
 import avatar from './../../../assets/images/Mohan-muruge.jpg';
 import publish from './../../../assets/images/add_comment.svg';
-
+import axios from 'axios';
+import {useState, useEffect} from 'react';
+import{useParams} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
 export function HeroApp(props){
 
-    const postedDate = new Date (props.activeVideo.timestamp).toLocaleDateString('en-US').split(',')[0];
-    // const date = new Date (props.activeVideo.comments.timestamp).toLocaleDateString('en-US').split(',')[0];
-    const comments = (props.activeVideo);
+ const [videos, setVideos] = useState([]);
+const [selectedVideo, setSelectedVideo] = useState({});
+
+const params = useParams();
+
+useEffect(() =>{
+    axios
+    .get('https://project-2-api.herokuapp.com/videos?api_key=simba')
+    .then((response) =>{
+        console.log(response);
+        setVideos(response.data);
+    })
+    .catch((err) => console.log(err));
+}, []);
+
+useEffect(() =>{
+    console.log(params.id);
+
+    if (params.id){
+        axios
+        .get(`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=simba`)
+        .then((response) =>{
+            console.log(response);
+            setSelectedVideo(response.data);
+        })
+        .catch((err) => console.log(err));
+    }else{
+        axios
+        .get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=simba`)
+        .then((response) =>{
+            console.log(response);
+            setSelectedVideo(response.data);
+        })
+        .catch((err) => console.log(err));
+    }
+
+}, [params.id]);
+    
 return(
 
     //Video being played section
-
-
+   
+   
+    
     <div className='main-video'>
+
+        <div className="main-video__poster">
+        <video controls  poster ={selectedVideo.image}
+     />
+        </div>
+
      
 
-       <h1 className='main-video__title'>{props.activeVideo.title}</h1>
+       <h1 className='main-video__title'>{selectedVideo.title}</h1>
        <hr/>
         <div>
+        
 
        <div className='main-video__container'>
        <div className='main-video__container__block'>
-       <h3 className='main-video__container__block__channel-name'>By {props.activeVideo.channel}</h3>
-       <p className='main-video__container__block__date'>{postedDate}</p>
+       <h3 className='main-video__container__block__channel-name'>By {selectedVideo.channel}</h3>
+       <p className='main-video__container__block__date'>{new Date(selectedVideo.timestamp).toLocaleDateString()}</p>
        </div>
 
        <div className='main-video__container__inline'>
@@ -37,8 +84,8 @@ return(
 
        <div className='main-video__container__inline'>
       
-       <p className='main-video__container__inline__text'>{props.activeVideo.views}</p>
-       <p className='main-video__container__inline__text'>{props.activeVideo.likes}</p> 
+       <p className='main-video__container__inline__text'>{selectedVideo.views}</p>
+       <p className='main-video__container__inline__text'>{selectedVideo.likes}</p> 
 
        </div>
      
@@ -46,14 +93,14 @@ return(
        <hr/>
 
        <div className='main-video__container__description'>
-       <p>{props.activeVideo.description}</p>
+       <p>{selectedVideo.description}</p>
        </div>
 
             
         {/* Comments input section */}
 
        <div className='comments-container'>
-            <h2>3 Comments</h2>
+            <h2>Comments</h2>
         <div className='comments-container__block'>
             <h3>JOIN THE CONVERSATION</h3>
             <img src={avatar} className='comments-container__block__avatar-picture' alt='avatar'/>
@@ -70,22 +117,42 @@ return(
         
        <ul>
       
-        {props.activeVideo.comments.map((message,index)=>(
-            
-            <>
-            <li key={index} className='comments-container__title'>{message.name}</li>
-            <div className='comments-container__avatar'></div>
-            { <li key={index} className='comments-container__message'>{message.comment}</li> }
-            { <li key={index} className='comments-container__date'>{new Date (message.timestamp).toLocaleDateString()}</li>}
-            <hr/>
-            </>   
-
-        ))}
-       
+       {selectedVideo.comments &&(
+            <div>
+                <h2>Comments</h2>
+                <ul>
+                    {selectedVideo.comments.map((message, index) => (
+                        <>
+                        <li className='comments-container__title' key={index}>{message.name}</li>
+                        <div className='comments-container__avatar'></div>
+                        <li className='comments-container__message' key={index}>{message.comment}</li>
+                        <li className='comments-container__date' key={index}>{new Date(message.timestamp).toLocaleDateString()}</li>
+                        </>
+                    ))}
+                </ul>
+            </div>
+        )} 
        </ul>
        </div>
     </div>
+
+    <ul className='video-list'>
+        <h3 className='video-list__title'>NEXT VIDEOS</h3>
+        {videos
+        .filter((video) => video.id !== selectedVideo.id)
+        .map((video) => (
+            <li className='video-list__item' key={video.id}>
+                <Link to={`/videos/${video.id}`}>
+                    <img className='video-list__img' src={video.image} alt="video"/>
+                    <h3 className='video-list__name'>{video.title}</h3>
+                    <p className='video-list__channel'>{video.channel}</p>
+                </Link>
+            </li>
+        ))       
+        }
+      </ul> *
     
     </div>
 )
+
 }
