@@ -43,6 +43,10 @@
             font-size: 0.7rem;
     
         }
+
+        @include desktopHigh{
+            left: 40.9rem;
+        }
     }
 
     &__label__description{
@@ -57,7 +61,10 @@
             left: -21rem;
             font-size: 0.7rem;
 
-    
+        }
+
+        @include desktopHigh{
+            left: -26rem;
         }
     }
 
@@ -99,6 +106,10 @@
             height: 2rem;
             padding: 0.1rem 7.5rem 0.1rem 1rem;
         }
+
+        @include desktopHigh{
+            left: 33rem;
+        }
     }
     &__input--description{
         width: 60%;
@@ -122,6 +133,10 @@
             padding: 0.5rem 7.5rem 4rem 1rem;
             margin-bottom: 3rem;
         }
+
+        @include desktopHigh{
+            left: 41rem;
+        }
     }
 
     &__button{
@@ -129,14 +144,14 @@
         background-color: $brainflix-blue;
         border: hidden;
         padding: 0rem 11rem 1rem 11rem ;
-        height: 2rem;
+        height: 3rem;
         margin: 1rem;
         border-radius: 5px;
         
         @include tablet{
-            width: 20%;
-            padding: 0rem 2rem 1rem 1rem;
-            margin-left: 36.2rem;
+            width: 12rem;
+            padding: 0rem 8rem 1rem 1rem;
+            margin-left: 36.5rem;
         }
 
         @include desktop{
@@ -146,6 +161,10 @@
             left: 36.5rem;
             height: 3rem;
         
+        }
+
+        @include desktopHigh{
+            left: 46rem;
         }
         h3{
             color: $white;
@@ -159,7 +178,7 @@
             }
 
             @include desktop{
-                left: 0.9rem;
+                left: 2.9rem;
             }
         }
 
@@ -189,7 +208,8 @@
 
         @include tablet{
             position: relative;
-            top: -5rem;
+            top: -6rem;
+            left: 3rem;
         }
 
         @include desktop{
