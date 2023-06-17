@@ -2,83 +2,85 @@
 @import './../../../styles/partials/variables.scss';
 
 
-.video-list{
+// .video-list{
 
-    @include desktop{
-     margin-left: 10rem;
-     border-left: 2px solid;
-     border-color: $mercury;
-     position: relative;
-     top: -3rem;
-     padding: .5rem 0;
-        }
+//     @include desktop{
+//      margin-left: 10rem;
+//      border-left: 2px solid;
+//      border-color: $mercury;
+//      position: relative;
+//      top: -3rem;
+//      padding: .5rem 0;
+//         }
 
-     li{
-         height: 110px;
-            list-style-type: none;
+//      li{
+//          height: 110px;
+//             list-style-type: none;
 
          
 
-     }
-    &__title{
-        font-family: Avenir-regular;
-        font-size: 1rem;
-        color: $silver;
-        margin: 1rem 1.8rem;
+//      }
+//     &__title{
+//         font-family: Avenir-regular;
+//         font-size: 1rem;
+//         color: $silver;
+//         margin: 1rem 1.8rem;
 
-        @include desktop{
-            font-size: 0.8rem;
-            white-space: nowrap;
-        }
-    }
+//         @include desktop{
+//             font-size: 0.8rem;
+//             white-space: nowrap;
+//         }
+//     }
 
-    &__img{
-        height: 6rem;
-        width: 9rem;
-        border-radius: 0.5rem;
-        @include desktop{
-            height: 5rem;
-            width: 7.5rem;
-            position: relative;
-            left: 1rem;
+//     &__img{
+//         height: 6rem;
+//         width: 9rem;
+//         border-radius: 0.5rem;
+//         @include desktop{
+//             height: 5rem;
+//             width: 7.5rem;
+//             position: relative;
+//             left: 1rem;
 
-    }
-    }
+//     }
+//     }
 
-    &__name{
-        font-family: Avenir-bold;
-        color: $brainflix-black;
-        width: 50%;
-        font-size: 1.1rem;
-        line-height: 1.54rem;
-        position: relative;
-        top: -5.5rem;
-        left: 12rem;
+//     &__name{
+//         font-family: Avenir-bold;
+//         color: $brainflix-black;
+//         width: 50%;
+//         font-size: 1.1rem;
+//         line-height: 1.54rem;
+//         position: relative;
+//         top: -5.5rem;
+//         left: 12rem;
+//         font-style: none;
+//         list-style-type: none;
 
-        @include tablet{
-            width: 25%;
-        }
-        @include desktop{
-            width: 130%;
-            font-size: 0.8rem;
-            top: -5rem;
-            left: 10.5rem;
+//         @include tablet{
+//             width: 25%;
+//         }
+//         @include desktop{
+//             width: 130%;
+//             font-size: 0.8rem;
+//             top: -5rem;
+//             left: 10.5rem;
 
-        }
-    }
-    &__channel{
-        font-family: Avenir-regular;
-        color: $brainflix-black;
-        width: 50%;
-        font-size: 1.1rem;
-        position: relative;
-        top: -4.2rem;
-        left: 12rem;
+//         }
+//     }
+//     &__channel{
+//         font-family: Avenir-regular;
+//         color: $brainflix-black;
+//         width: 50%;
+//         font-size: 1.1rem;
+//         position: relative;
+//         top: -4.2rem;
+//         left: 12rem;
 
-        @include desktop{
-            font-size: 0.9rem;
-            width: 100%;
-            left: 10.5rem;
-        }
-    }
-}
+//         @include desktop{
+//             font-size: 0.9rem;
+//             width: 100%;
+//             left: 10.5rem;
+//         }
+//     }
+// }

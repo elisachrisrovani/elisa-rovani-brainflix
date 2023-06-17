@@ -30,7 +30,7 @@
         }
     }
 
-    h4{
+    &__label__title{
         font-family: Avenir-regular;
         color: $silver;
         font-size: 0.9rem;
@@ -38,12 +38,29 @@
 
         @include desktop{
             position: relative;
-            top: -14rem;
+            top: -16.5rem;
             left:36rem;
             font-size: 0.7rem;
     
         }
     }
+
+    &__label__description{
+        font-family: Avenir-regular;
+        color: $silver;
+        font-size: 0.9rem;
+        margin: 0.5rem 1rem 0rem 1rem;
+
+        @include desktop{
+            position: relative;
+            top: -11rem;
+            left: -21rem;
+            font-size: 0.7rem;
+
+    
+        }
+    }
+
 
     img{
         width: 92%;
@@ -76,7 +93,7 @@
         @include desktop{
             position: relative;
             top: -14.3rem;
-            left: 36rem;
+            left: 28rem;
             width: 40%;
             font-size: 0.8rem;
             height: 2rem;
@@ -97,12 +114,13 @@
 
         @include desktop{
             position: relative;
-            top: -14.3rem;
+            top: -12.3rem;
             left: 36rem;
             width: 40%;
             font-size: 0.8rem;
             height: 2rem;
             padding: 0.5rem 7.5rem 4rem 1rem;
+            margin-bottom: 3rem;
         }
     }
 
@@ -123,9 +141,10 @@
 
         @include desktop{
             position: relative;
-            top: -14rem;
-            width: 10%;
+            top: -13.5rem;
+            width: 11rem;
             left: 36.5rem;
+            height: 3rem;
         
         }
         h3{
@@ -140,7 +159,7 @@
             }
 
             @include desktop{
-                left: 3.9rem;
+                left: 0.9rem;
             }
         }
 

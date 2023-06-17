@@ -1,5 +1,4 @@
 import './HeroApp.scss';
-
 import views from './../../../assets/images/views.svg';
 import likes from './../../../assets/images/likes.svg';
 import avatar from './../../../assets/images/Mohan-muruge.jpg';
@@ -11,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export function HeroApp(props){
+export function HeroApp(){
 
  const [videos, setVideos] = useState([]);
 const [selectedVideo, setSelectedVideo] = useState({});
@@ -64,7 +63,7 @@ return(
      />
         </div>
 
-     
+    
 
        <h1 className='main-video__title'>{selectedVideo.title}</h1>
        <hr/>
@@ -84,8 +83,8 @@ return(
 
        <div className='main-video__container__inline'>
       
-       <p className='main-video__container__inline__text'>{selectedVideo.views}</p>
-       <p className='main-video__container__inline__text'>{selectedVideo.likes}</p> 
+       <p className='main-video__container__inline__text--views'>{selectedVideo.views}</p>
+       <p className='main-video__container__inline__text--likes'>{selectedVideo.likes}</p> 
 
        </div>
      
@@ -124,33 +123,38 @@ return(
                     {selectedVideo.comments.map((message, index) => (
                         <>
                         <li className='comments-container__title' key={index}>{message.name}</li>
+                       
                         <div className='comments-container__avatar'></div>
                         <li className='comments-container__message' key={index}>{message.comment}</li>
                         <li className='comments-container__date' key={index}>{new Date(message.timestamp).toLocaleDateString()}</li>
+                        <hr/>
                         </>
                     ))}
                 </ul>
+                
             </div>
         )} 
        </ul>
        </div>
     </div>
 
-    <ul className='video-list'>
+    <div>
+    <div className='video-list'>
         <h3 className='video-list__title'>NEXT VIDEOS</h3>
         {videos
         .filter((video) => video.id !== selectedVideo.id)
         .map((video) => (
-            <li className='video-list__item' key={video.id}>
+            <div className='video-list__item' key={video.id}>
                 <Link to={`/videos/${video.id}`}>
                     <img className='video-list__img' src={video.image} alt="video"/>
                     <h3 className='video-list__name'>{video.title}</h3>
                     <p className='video-list__channel'>{video.channel}</p>
                 </Link>
-            </li>
+            </div>
         ))       
         }
-      </ul> *
+      </div> 
+    </div>
     
     </div>
 )

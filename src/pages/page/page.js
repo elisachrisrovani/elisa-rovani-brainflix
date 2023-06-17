@@ -6,9 +6,21 @@ import { Search } from './../../components/Header/Search';
 import {Button} from './../../components/Header/Button';
 import uploadVideo from './../../assets/images/Upload-video-preview.jpg';
 import Publish from './../../assets/images/publish.svg';
+import { Link } from 'react-router-dom';
 import './page.scss';
 
 export function Page(){
+
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        const form = event.target;
+        const {title, description} = form;
+
+        if(!title.value || !description.value){
+            return alert('please fill all form fields');
+        }
+        alert("Your video has been published");
+    };
 
     return(
         <>
@@ -25,27 +37,48 @@ export function Page(){
 
         <main>
            
-        <div className='main-container'>
+      
+       <div className='main-container'>
         <hr/>
         <h1>Upload Video</h1>
         <hr className='main-container__hr--hidden'/>
         <h2>VIDEO THUMBNAIL</h2>
         <img src={uploadVideo} alt={uploadVideo}/>
-        <h4>TITLE YOUR VIDEO</h4>
-        <input className='main-container__input--title' type='text' placeholder='Add a title to your video'/>
-        <h4>ADD A VIDEO DESCRIPTION</h4>
-        <input className='main-container__input--description' type='text' placeholder='Add a description to your video'/>
+        <form onSubmit={handleSubmit}>            
+        <label className='main-container__label__title'>TITLE YOUR VIDEO</label>
+        <input className='main-container__input--title' type='text' placeholder='Add a title to your video' onChange={(event) =>{
+            if(event.target.value.length < 3){
+                console.log('Title is not long enough');
+            }else{
+                console.log('Title is valid')
+            }
+        }}/>
+        <label className='main-container__label__description'>ADD A VIDEO DESCRIPTION</label>
+        <input className='main-container__input--description' type='text' placeholder='Add a description to your video' onChange={(event) =>{
+            if(event.target.value.length < 5){
+                console.log('Description is not long enough');
+            }  else{
+                console.log('Description is valid')
+            }
+        }}/>
 
         <hr className='main-container__line--hidden'/>
 
-        <div className='main-container__button'>
+       <Link to ='/'>
+       <button className='main-container__button' onClick={(event) =>{
+            alert("Your video has been uploaded")
+       }}>
         <img src={Publish} alt='upload'/>
             <h3>PUBLISH</h3>
-        </div>
+        </button>
+       </Link>
         
         <p>CANCEL</p>
+        </form>
         </div>
+        
         </main></>
+       
 
     )
 
