@@ -52,8 +52,7 @@ useEffect(() =>{
     
 return(
 
-    //Video being played section
-   
+    //Video being played section  
    
     
     <div className='main-video'>
@@ -137,7 +136,7 @@ return(
        </ul>
        </div>
     </div>
-
+     {/* Videos list section */}
     <div>
     <div className='video-list'>
         <h3 className='video-list__title'>NEXT VIDEOS</h3>

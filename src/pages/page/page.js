@@ -66,7 +66,7 @@ export function Page(){
 
        <Link to ='/'>
        <button className='main-container__button' onClick={(event) =>{
-            alert("Your video has been uploaded")
+            alert("Your video has been published")
        }}>
         <img src={Publish} alt='upload'/>
             <h3>PUBLISH</h3>
