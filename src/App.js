@@ -8,8 +8,7 @@ function App() {
     
 
   return (
-    
-     
+         
            <BrowserRouter>
             <Routes>
             <Route path="/upload" element = {<Page/>}/>

@@ -8,19 +8,42 @@ import uploadVideo from './../../assets/images/Upload-video-preview.jpg';
 import Publish from './../../assets/images/publish.svg';
 import { Link } from 'react-router-dom';
 import './page.scss';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export function Page(){
 
-    const handleSubmit = (event) =>{
-        event.preventDefault();
-        const form = event.target;
-        const {title, description} = form;
+   
 
-        if(!title.value || !description.value){
-            return alert('please fill all form fields');
-        }
-        alert("Your video has been published");
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [form, setForm] = useState({
+        title: '',
+        description:''
+    })
+
+    var bodyFormData = new FormData();
+    bodyFormData.append("title", title);
+    bodyFormData.append("description",description);
+
+    axios({
+        method:"post",
+        url: "http://localhost:5050/videos",
+        data:{bodyFormData},
+
+    })
+    .then(function(response){
+        console.log(response);
+    })
+    .catch(function(response){
+        console.log(response);
+    });
+
+    const handleChange = (event) =>{
+       setForm(event.target.value)        
     };
+
+    const onSubmit = (data) => console.log("get", JSON.stringify(data));
 
     return(
         <>
@@ -44,23 +67,15 @@ export function Page(){
         <hr className='main-container__hr--hidden'/>
         <h2>VIDEO THUMBNAIL</h2>
         <img src={uploadVideo} alt={uploadVideo}/>
-        <form onSubmit={handleSubmit}>            
-        <label className='main-container__label__title'>TITLE YOUR VIDEO</label>
+
+        <form onSubmit={handleChange}>            
+        <label className='main-container__label__title' >TITLE YOUR VIDEO</label>
         <input className='main-container__input--title' type='text' placeholder='Add a title to your video' onChange={(event) =>{
-            if(event.target.value.length < 3){
-                console.log('Title is not long enough');
-            }else{
-                console.log('Title is valid')
-            }
-        }}/>
+        setTitle(event.target.value)}}/>
         <label className='main-container__label__description'>ADD A VIDEO DESCRIPTION</label>
-        <input className='main-container__input--description' type='text' placeholder='Add a description to your video' onChange={(event) =>{
-            if(event.target.value.length < 5){
-                console.log('Description is not long enough');
-            }  else{
-                console.log('Description is valid')
-            }
-        }}/>
+        <input className='main-container__input--description' type='text' placeholder='Add a description to your video' 
+        onChange={(event) =>{
+        setDescription(event.target.value)}}/>
 
         <hr className='main-container__line--hidden'/>
 

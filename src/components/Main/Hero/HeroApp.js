@@ -19,7 +19,7 @@ const params = useParams();
 
 useEffect(() =>{
     axios
-    .get('https://project-2-api.herokuapp.com/videos?api_key=simba')
+    .get('http://localhost:5050/videos')
     .then((response) =>{
         console.log(response);
         setVideos(response.data);
@@ -32,7 +32,7 @@ useEffect(() =>{
 
     if (params.id){
         axios
-        .get(`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=simba`)
+        .get(`http://localhost:5050/videos/${params.id}`)
         .then((response) =>{
             console.log(response);
             setSelectedVideo(response.data);
@@ -40,7 +40,7 @@ useEffect(() =>{
         .catch((err) => console.log(err));
     }else{
         axios
-        .get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=simba`)
+        .get('http://localhost:5050/videos/84e96018-4022-434e-80bf-000ce4cd12b8')
         .then((response) =>{
             console.log(response);
             setSelectedVideo(response.data);
