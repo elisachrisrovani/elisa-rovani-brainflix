@@ -113,7 +113,7 @@ return(
 
         {/* Comments section */}
         
-       <ul>
+       {/* <ul> */}
       
        {selectedVideo.comments &&(
             <div>
@@ -133,7 +133,7 @@ return(
                 
             </div>
         )} 
-       </ul>
+       {/* </ul> */}
        </div>
     </div>
      {/* Videos list section */}
